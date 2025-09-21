@@ -24,3 +24,4 @@
             e.preventDefault();
             alert('Message sent! (Demo)');
         });
+        
