@@ -18,6 +18,7 @@
                 <li><a href="#safe-places">Safe Places</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <div id="google_translate_element"></div>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -173,5 +174,18 @@
 <!-- <iframe src="chatbot.html" 
         style="position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px; border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 9999;">
 </iframe> -->
+
+<!-- Google Translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,es,fr,hi,zh-CN,ar,pt,ru,de,jp',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
