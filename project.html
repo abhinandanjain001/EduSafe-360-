@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="project.css">
+
 <body>
     <nav>
         <div class="container nav-container">
@@ -18,6 +19,11 @@
                 <li><a href="#safe-places">Safe Places</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+        <form action="http://localhost:3000/subscribe" method="POST">
+  <input type="email" name="email" placeholder="Enter your email for alerts" required>
+  <button type="submit">Subscribe</button>
+</form>
+
                 <div id="google_translate_element"></div>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
@@ -100,12 +106,12 @@
                     <p>Custom GIS-mapped evacuation routes and assembly points tailored to your institution.</p>
                     <div class="monitor-image" style="background-image: url('https://images.unsplash.com/photo-1589561253898-7685d6df5e56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
                 </div>
-                <div class="safe-card">
+               <a href="realtimemonitoring.html"><div class="safe-card">
                     <i class="fas fa-chart-line"></i>
                     <h3>Real-Time Monitoring</h3>
                     <p>IoT sensors track fire, smoke, and seismic activity with instant alerts.</p>
                     <div class="monitor-image" style="background-image: url('https://images.unsplash.com/photo-1581094288338-231b058b38b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');"></div>
-                </div>
+                </div></a> 
                <a href="alertpridiction.html"><div class="safe-card">
                     <i class="fas fa-crystal-ball"></i>
                     <h3>Disaster Prediction</h3>
@@ -185,6 +191,7 @@
       autoDisplay: false
     }, 'google_translate_element');
   }
+  
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
