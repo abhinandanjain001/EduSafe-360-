@@ -7,32 +7,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="project.css">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00d4ff">
+
 
 <body>
-    <nav>
-        <div class="container nav-container">
-            <a href="#" class="logo">EduSafe 360</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#ar-vr">AR/VR</a></li>
-                <li><a href="#local-support">Local Support</a></li>
-                <li><a href="#safe-places">Safe Places</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-        <form action="http://localhost:3000/subscribe" method="POST">
-  <input type="email" name="email" placeholder="Enter your email for alerts" required>
-  <button type="submit">Subscribe</button>
-</form>
+<nav>
+  <div class="container nav-container">
+    <a href="#" class="logo">EduSafe 360</a>
+    <ul class="nav-links"> 
+      <li><a href="#home">Home</a></li>
+      <li><a href="#ar-vr">AR/VR</a></li>
+      <li><a href="#local-support">Local Support</a></li>
+      <li><a href="#safe-places">Safe Places</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-                <div id="google_translate_element"></div>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <!-- Translator + Subscription on Right -->
+    <div class="extra-section">
+      <div id="google_translate_element"></div>
+      <form action="http://localhost:3000/subscribe" method="POST" class="subscribe-form">
+        <input type="email" name="email" placeholder="Enter your email for alerts" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -72,6 +73,52 @@
             </div></a> 
         </div>
     </section>
+    <!-- //game section -->
+  <section id="games">
+    <div class="container">
+        <h2 class="section-title">Disaster Simulation Games</h2>
+        <div class="games-grid">
+
+            <!-- Game 1 -->
+            <div class="game-card">
+                <h3>Stop Disasters!</h3>
+                <p>Plan cities to survive floods, earthquakes, and wildfires.</p>
+                <a href="https://www.stopdisastersgame.org/" target="_blank">
+                    <button>Play Now</button>
+                </a>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-card">
+                <h3>Disaster Will Strike</h3>
+                <p>Physics-based destruction with earthquakes, floods, and more.</p>
+                <a href="https://www.gameflare.com/online-game/disaster-will-strike/" target="_blank">
+                    <button>Play Now</button>
+                </a>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game-card">
+                <h3>Disaster Simulator</h3>
+                <p>Sandbox-style experiments with earthquakes, fires, and floods.</p>
+                <a href="https://www.construct.net/en/free-online-games/disaster-simulator-48422/play" target="_blank">
+                    <button>Play Now</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<div id="game-container">
+  <!-- Loading Spinner -->
+  <div id="loading-spinner" style="display: none;">
+    <p>Loading game...</p>
+    <div class="spinner"></div>
+  </div>
+</div>
 
     <section id="local-support">
         <div class="container">
@@ -194,5 +241,9 @@
   
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/PointerLockControls.js"></script>
+
+</head>
 </body>
 </html>
